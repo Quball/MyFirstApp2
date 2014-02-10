@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myfirstapp2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/new_ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.myfirstapp2.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName="com.example.myfirstapp2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp2.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.LM_Fragment"
+            android:label="@string/title_activity_lm__fragment" >
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.PM_Fragment"
+            android:label="@string/title_activity_pm__fragment" >
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.FragmentActivity"
+            android:label="@string/title_activity_activity1" >
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.FinalFragmentActivity"
+            android:label="@string/title_activity_final_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.LM_FragmentLast"
+            android:label="@string/title_activity_lm__fragment_final" >
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.Last_LM_Fragment"
+            android:label="@string/title_activity_last__lm__fragment" >
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.LastFragmentActivity"
+            android:label="@string/title_activity_last_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.LM_LastFragment"
+            android:label="@string/title_activity_lm__last_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.PM_LastFragment"
+            android:label="@string/title_activity_pm__last_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.CameraActivity"
+            android:label="@string/title_activity_camera" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp2.NotificationActivity"
+            android:label="@string/title_activity_notification" >
+        </activity>
+    </application>
+
+</manifest>

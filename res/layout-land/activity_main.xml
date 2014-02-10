@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" 
+    android:orientation="horizontal"
+    android:id="@+id/main_view">
+    
+    
+    <!-- This ScrollView layout or its LinearLayout parent is useless. (WHY?) -->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+	
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content" >
+        
+	    <!-- Send message -->
+	    <EditText
+	        android:id="@+id/edit_message"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/edit_message" />
+	    
+	    <Button
+	       android:id="@+id/msg_btn"
+	       android:layout_width="256dp"
+	       android:layout_height="wrap_content"
+	       android:text="@string/button_send"
+	       android:layout_below="@id/edit_message"
+	       android:layout_alignParentRight="true"
+	       android:onClick="sendMessage" />
+	    
+	    <!-- Select color -->
+	    <Spinner
+	        android:id="@+id/spinner"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/msg_btn"
+	        android:entries="@array/color_array"
+	        android:prompt="@string/color_promt" />
+	    
+	    <Button
+	        android:id="@+id/color_btn"
+	        android:layout_width="256dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/color_send"
+	        android:layout_below="@id/spinner"
+	        android:layout_alignParentRight="true"
+	        android:onClick="setColor" />
+	    
+	    <!-- Start FragmentActivity -->
+	    <Button
+	        android:id="@+id/fragment_btn"
+	        android:layout_width="256dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/color_btn"
+	        android:layout_alignParentRight="true"
+	        android:text="@string/start_activity1"
+	        android:onClick="startFragment1" />
+	    
+	    <!-- Start CameraActivity -->
+	    <Button 
+	        android:id="@+id/camera_activity"
+	        android:layout_width="256dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/fragment_btn"
+	        android:layout_alignParentRight="true"
+	        android:text="@string/start_camera"
+	        android:onClick="startCamera" />
+	    
+	    <!-- Notification Activity -->
+		<Button 
+		    android:id="@+id/notify_btn"
+		    android:layout_width="256dp"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_below="@id/camera_activity"
+		    android:text="@string/notify_btn" />
+		</RelativeLayout>
+	</ScrollView>
+</LinearLayout>

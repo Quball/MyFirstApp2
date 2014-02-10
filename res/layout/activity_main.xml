@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" 
+    android:orientation="vertical"
+    android:id="@+id/main_view">
+	
+    <!-- Send message -->
+    <EditText
+        android:id="@+id/edit_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message" />
+    
+    <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/button_send"
+       android:onClick="sendMessage" />
+    
+    <!-- Select color -->
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/color_array"
+        android:prompt="@string/color_promt" />
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/color_send"
+        android:onClick="setColor" />
+    
+    <!-- Start FragmentActivity -->
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_activity1"
+        android:onClick="startFragment1" />
+    
+    <!-- Start CameraActivity -->
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_camera"
+        android:onClick="startCamera" />
+    
+    <!-- Notification Activity -->
+	<Button 
+	    android:id="@+id/notify_btn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/notify_btn" />
+	
+</LinearLayout>
